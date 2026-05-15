@@ -4,6 +4,11 @@
       "buildName": "orca-test-banner",
       "remoteName": "orcaTestBanner",
       "exposedModule": "./orca-test-banner"
+    },
+    "external-search": {
+      "buildName": "orca-external-search",
+      "remoteName": "orcaExternalSearch",
+      "exposedModule": "./orca-external-search"
     }
   }
 }
