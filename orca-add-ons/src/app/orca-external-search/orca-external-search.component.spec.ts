@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OrcaExternalSearchComponent } from './orca-external-search.component';
 
-describe('ExternalSearchComponent', () => {
+describe('OrcaExternalSearchComponent', () => {
   let component: OrcaExternalSearchComponent;
   let fixture: ComponentFixture<OrcaExternalSearchComponent>;
 

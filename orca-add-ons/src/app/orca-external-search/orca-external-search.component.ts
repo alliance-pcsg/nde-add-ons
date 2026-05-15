@@ -1,6 +1,5 @@
-import { Component, Input, Inject } from '@angular/core';
+import { Component, Input, Inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-// import { viewName } from '../../environments/environment';
 
 @Component({
   selector: 'orca-external-search',
@@ -9,70 +8,81 @@ import { CommonModule } from '@angular/common';
   templateUrl: './orca-external-search.component.html',
   styleUrl: './orca-external-search.component.scss',
 })
-export class ExternalSearchComponent {
+export class OrcaExternalSearchComponent implements OnInit {
 
-  @Input() private hostComponent!: any;
+  // Injected by the Primo NDE host — gives this component access to the parent slot's context
+  @Input() hostComponent!: any;
 
+  // Merged result of defaults and institution-supplied MODULE_PARAMETERS config
   public params: any;
+
+  // worldcatString should be a full URL prefix including scheme, e.g.
+  // "https://uwashington.on.worldcat.org/search?databaseList=&queryString="
+  // The search terms are appended directly, so the prefix must end with the query parameter
   public worldcatString: string;
-  public worldcatBrandName: string;
-  public worldcatLogoUrl: string;
-  public googleScholarLogoUrl: string;
+  public worldcatBrandName: string;    // Display name shown in the link text, e.g. "UW WorldCat"
+  public worldcatLogoUrl: string;      // URL of the WorldCat logo image
+  public googleScholarLogoUrl: string; // URL of the Google Scholar logo image
 
+  constructor(
+    // MODULE_PARAMETERS is provided by the Primo NDE host with the JSON config supplied by the institution.
+    // Defaults below are used when a parameter is absent from the config.
+    @Inject('MODULE_PARAMETERS') public moduleParameters: any
+  ) {
+    this.params = Object.assign({
+      worldcatString: "https://search.worldcat.org/search?q=",
+      worldcatBrandName: "WorldCat",
+      worldcatLogoUrl: "https://search.worldcat.org/favicons/favicon-32x32.png",
+      googleScholarLogoUrl: "https://scholar.google.com/favicon.ico"
+    }, moduleParameters);
 
-  constructor(@Inject('MODULE_PARAMETERS') public moduleParameters: any) {
-    console.log('Module parameters External Search:', this.moduleParameters);
-
-    this.params = Object.assign({ worldcatString: "search.worldcat.org/search?q=", worldcatBrandName: "WorldCat", worldcatLogoUrl: "https://search.worldcat.org/favicons/favicon-32x32.png", googleScholarLogoUrl: "https://scholar.google.com/favicon.ico" }, moduleParameters);
     this.worldcatString = this.params.worldcatString;
     this.worldcatBrandName = this.params.worldcatBrandName;
     this.worldcatLogoUrl = this.params.worldcatLogoUrl;
     this.googleScholarLogoUrl = this.params.googleScholarLogoUrl;
   }
 
+  // Initialized to null/empty; computed in ngOnInit once the URL is accessible
+  searchMode: string | null = null;
+  searchQuery: string | null = null;
+  searchTerms: string = '';
+
   ngOnInit() {
-    console.log('host component instance');
-    console.log('Host component instance:', this.hostComponent);
+    // Read the current search mode and query from the Primo page URL.
+    // These are computed here (not in field initializers) to ensure the DOM
+    // and DI context are fully established before window.location is accessed.
+    this.searchMode = this.getUrlParameter('mode');
+    this.searchQuery = this.getUrlParameter('query');
+
+    // processText extracts the human-readable search terms from the raw query string,
+    // handling both simple and advanced search modes.
+    // encodeURIComponent ensures special characters (spaces, &, #, etc.) don't break the URLs.
+    this.searchTerms = encodeURIComponent(this.processText(this.searchQuery ?? ''));
   }
 
+  // Reads a single query parameter from the current page URL.
   getUrlParameter(parameterName: string): string | null {
     const urlParams = new URLSearchParams(window.location.search);
-    console.log(urlParams.get(parameterName));
     return urlParams.get(parameterName);
   }
 
-  searchMode: string | null = this.getUrlParameter('mode');
-  searchQuery: string | null = this.getUrlParameter('query');
-
-
-
-
+  // Extracts a clean, human-readable search string from the Primo query parameter.
+  //
+  // Simple mode: the query parameter is already a plain search string, returned as-is.
+  //
+  // Advanced mode: Primo encodes each search field as a semicolon-delimited segment,
+  // where each segment is a comma-delimited triple of [index, operator, term].
+  // For example: "title,contains,angular;author,contains,ward"
+  // This method extracts the third element (the term) from each segment and joins
+  // them with spaces to produce a single search string suitable for external links.
   processText(input: string): string {
-    console.log(this.searchMode);
-
-
-
-    // Check if search mode is advanced
     if (this.searchMode === 'advanced') {
-      console.log("search mode equals " + this.searchMode);
-      // Split the search string into separate arrays using ";"
       const arrays = input.split(";").map(segment => segment.split(","));
-      // Extract the third element from each sub-array
-      const thirdElements = arrays.map(arr => arr[2]).filter(Boolean); // Remove undefined values
-      // Concatenate the extracted elements into a space-separated string
-      console.log(thirdElements.join(" "));
+      const thirdElements = arrays.map(arr => arr[2]).filter(Boolean);
       return thirdElements.join(" ");
-
     } else {
-      /* const searchQuery = this.getUrlParameter('query') ?? '';
-      console.log(searchQuery); */
-
       return this.searchQuery ?? '';
-
     }
-
   }
-
-  searchTerms = this.processText(this.searchQuery ?? '');
 
 }
