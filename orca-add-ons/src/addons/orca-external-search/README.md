@@ -3,10 +3,10 @@
 ## Details
 
 - Name: `external-search`
-- URL: `https://su-ctorres.github.io/test-addon-profiles/external-search/`
-- Configuration JSON Template: [external-search.json](./external-search.json)
+- URL: `https://alliance-pcsg.github.io/nde-add-ons/orca-external-search/`
+- Configuration JSON Template: [external-search.json](./orca-external-search.json)
 - Placement: `nde-search-bar-container-after`
-- Component Folder: [src/app/external-search](https://github.com/su-ctorres/test-addon-profiles/tree/main/test-addon-profiles/src/app/external-search)
+- Component Folder: [`src/app/orca-display-mmsid`](../../app/orca-external-search)
 
 ## Description
 
@@ -45,4 +45,4 @@ If you use an empty configuration file, the following defaults are used:
 
 ## Example
 
-See [external-search.json](./external-search.json) for a sample configuration.
+See [orca-external-search.json](./orca-external-search.json) for a sample configuration.

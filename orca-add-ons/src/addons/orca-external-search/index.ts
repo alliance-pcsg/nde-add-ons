@@ -1,7 +1,7 @@
 import { AddonRuntimeProfile } from '../addon-profile.types';
-import { OrcaExternalSearchComponent } from '../../app/orca-external-search/orca-external-search.component.spec';
+import { OrcaExternalSearchComponent } from '../../app/orca-external-search/orca-external-search.component.ts';
 
-export const externalSearchAddonProfile: AddonRuntimeProfile = {
+export const orcaExternalSearchProfile: AddonRuntimeProfile = {
   key: 'external-search',
   buildName: 'orca-external-search',
   selectorComponentMap: new Map<string, any>([
