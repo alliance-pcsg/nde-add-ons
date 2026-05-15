@@ -5,6 +5,7 @@ This repository hosts multiple add-ons that share the same `customModule-main` b
 ## Add-ons
 
 - [`orca-test-banner`](./orca-add-ons/src/addons/orca-test-banner/README.md)
+- [`orca-external-search`](./orca-add-ons/src/addons/orca-external-search/README.md)
 
 
 ## Adding a New Component

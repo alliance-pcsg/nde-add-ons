@@ -1,8 +1,10 @@
 import { AddonRuntimeProfile } from './addon-profile.types';
 import { orcaTestBannerProfile } from './orca-test-banner';
+import { orcaExternalSearchAddonProfile } from './orca-external-search';
 
 const addonProfiles: Record<string, AddonRuntimeProfile> = {
-  'orca-test-banner': orcaTestBannerProfile
+  'orca-test-banner': orcaTestBannerProfile,
+  'orca-external-search': orcaExternalSearchAddonProfile
 };
 
 export function resolveAddonRuntimeProfile(addonKey: string): AddonRuntimeProfile {
