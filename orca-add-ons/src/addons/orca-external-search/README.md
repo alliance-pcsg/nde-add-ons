@@ -2,11 +2,11 @@
 
 ## Details
 
-- Name: `external-search`
+- Name: `orca-external-search`
 - URL: `https://alliance-pcsg.github.io/nde-add-ons/orca-external-search/`
-- Configuration JSON Template: [external-search.json](./orca-external-search.json)
-- Placement: `nde-search-bar-container-after`
-- Component Folder: [`src/app/orca-display-mmsid`](../../app/orca-external-search)
+- Configuration JSON Template: [orca-external-search.json](./orca-external-search.json)
+- Placement: `nde-search-filters-side-nav-before`
+- Component Folder: [`src/app/orca-external-search`](../../app/orca-external-search)
 
 ## Description
 

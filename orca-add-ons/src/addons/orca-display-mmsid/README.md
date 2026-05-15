@@ -10,11 +10,29 @@
 
 ## Description
 
-This add-on adds the institution zone and network zone MMS ID to the full record display, when those respective MMS ID's exist. 
+This add-on adds the institutional zone and network zone MMS IDs to the full record display, when those respective MMS IDs exist.
 
 ## Configuration
 
-The component requires no configuration.
+All parameters are required. The component will show nothing until all four are set.
+
+| Parameter | Description |
+|---|---|
+| `izSuffix` | The numeric suffix that identifies an IZ MMS ID (e.g. `1452` for UW) |
+| `instCode` | The Alma institution code used in the SRU query (e.g. `01ALLIANCE_UW`) |
+| `sruHost` | The Alma SRU hostname for your region (e.g. `na01.alma.exlibrisgroup.com`) |
+| `nzCode` | The network zone ISIL code used in 035 subfields (e.g. `EXLNZ-01ALLIANCE_NETWORK`) |
+
+Example configuration:
+
+```json
+{
+  "izSuffix": "1452",
+  "instCode": "01ALLIANCE_UW",
+  "sruHost": "na01.alma.exlibrisgroup.com",
+  "nzCode": "EXLNZ-01ALLIANCE_NETWORK"
+}
+```
 
 ## Example
 

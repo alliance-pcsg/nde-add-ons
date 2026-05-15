@@ -1,8 +1,8 @@
 import { AddonRuntimeProfile } from '../addon-profile.types';
-import { OrcaExternalSearchComponent } from '../../app/orca-external-search/orca-external-search.component.ts';
+import { OrcaExternalSearchComponent } from '../../app/orca-external-search/orca-external-search.component';
 
 export const orcaExternalSearchProfile: AddonRuntimeProfile = {
-  key: 'external-search',
+  key: 'orca-external-search',
   buildName: 'orca-external-search',
   selectorComponentMap: new Map<string, any>([
     ['nde-search-filters-side-nav-before', OrcaExternalSearchComponent]

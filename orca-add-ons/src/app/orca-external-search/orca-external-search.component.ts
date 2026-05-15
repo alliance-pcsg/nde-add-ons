@@ -9,9 +9,9 @@ import { CommonModule } from '@angular/common';
   templateUrl: './orca-external-search.component.html',
   styleUrl: './orca-external-search.component.scss',
 })
-export class ExternalSearchComponent {
+export class OrcaExternalSearchComponent {
 
-  @Input() private hostComponent!: any;
+  @Input() hostComponent!: any;
 
   public params: any;
   public worldcatString: string;
