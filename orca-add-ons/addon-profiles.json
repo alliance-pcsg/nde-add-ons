@@ -5,10 +5,15 @@
       "remoteName": "orcaTestBanner",
       "exposedModule": "./orca-test-banner"
     },
-    "external-search": {
+    "orca-external-search": {
       "buildName": "orca-external-search",
       "remoteName": "orcaExternalSearch",
       "exposedModule": "./orca-external-search"
+    },
+    "orca-display-mmsid": {
+      "buildName": "orca-display-mmsid",
+      "remoteName": "orcaDisplayMmsid",
+      "exposedModule": "./orca-display-mmsid"
     }
   }
 }
