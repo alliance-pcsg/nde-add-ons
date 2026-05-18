@@ -1,0 +1,27 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.orca-top-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.4;
+
+  &__logo {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+
+  &__message {
+    flex: 1;
+  }
+}
