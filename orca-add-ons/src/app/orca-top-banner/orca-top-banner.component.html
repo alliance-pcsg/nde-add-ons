@@ -1,0 +1,8 @@
+@if (isVisible) {
+  <div class="orca-top-banner" role="alert" [ngStyle]="bannerStyles">
+    @if (config.logoUrl) {
+      <img class="orca-top-banner__logo" [src]="config.logoUrl" alt="Alert icon" aria-hidden="true" />
+    }
+    <span class="orca-top-banner__message">{{ config.message }}</span>
+  </div>
+}
