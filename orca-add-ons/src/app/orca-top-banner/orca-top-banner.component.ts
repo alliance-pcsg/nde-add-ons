@@ -5,6 +5,9 @@ interface TopBannerConfig {
   message?: string;
   backgroundColor?: string;
   foregroundColor?: string;
+  fontSize?: string;
+  fontWeight?: string;
+  fontFace?: string;
   logoUrl?: string;
   startDateTime?: string;
   endDateTime?: string;
@@ -29,10 +32,14 @@ export class OrcaTopBannerComponent implements OnInit {
   }
 
   get bannerStyles(): Record<string, string> {
-    return {
+    const styles: Record<string, string> = {
       'background-color': this.config.backgroundColor || '#b22222',
       'color': this.config.foregroundColor || '#ffffff'
     };
+    if (this.config.fontSize) styles['font-size'] = this.config.fontSize;
+    if (this.config.fontWeight) styles['font-weight'] = this.config.fontWeight;
+    if (this.config.fontFace) styles['font-family'] = this.config.fontFace;
+    return styles;
   }
 
   private isWithinDateWindow(): boolean {

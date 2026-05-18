@@ -24,6 +24,9 @@ Upload [orca-top-banner.json](./orca-top-banner.json) as the configuration templ
 | `message` | string | Yes | The alert text displayed in the banner. The banner will not render if this is empty. |
 | `backgroundColor` | string | No | CSS color value for the banner background. Defaults to `#b22222` (dark red). |
 | `foregroundColor` | string | No | CSS color value for the banner text. Defaults to `#ffffff` (white). |
+| `fontSize` | string | No | CSS font-size value for the banner text (e.g. `1rem`, `16px`, `1.1em`). Omit to inherit the site default. |
+| `fontWeight` | string | No | CSS font-weight value (e.g. `400`, `600`, `bold`). Omit to inherit the site default. |
+| `fontFace` | string | No | CSS font-family value (e.g. `"Arial, sans-serif"`, `"Georgia, serif"`). Omit to inherit the site default. |
 | `logoUrl` | string | No | URL or asset path for an icon displayed to the left of the message. Omit or leave blank to show no icon. |
 | `startDateTime` | string | No | ISO 8601 date-time string (e.g. `2026-06-01T08:00:00-07:00`). Banner will not display before this time. Omit to show immediately. See [Date/time format and time zones](#datetime-format-and-time-zones). |
 | `endDateTime` | string | No | ISO 8601 date-time string (e.g. `2026-06-01T12:00:00-07:00`). Banner will not display after this time. Omit to show indefinitely. See [Date/time format and time zones](#datetime-format-and-time-zones). |
