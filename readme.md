@@ -109,3 +109,20 @@ npm run build:addon
 ```
 
 Changing `ADDON_KEY` only affects single add-on builds and local generated settings. Leave optional overrides such as `BUILD_NAME`, `REMOTE_NAME`, and `PACKAGE_NAME` commented out unless you need to change the packaged output names.
+
+## Fork
+
+If you fork this repository, enable GitHub Pages for your fork before sharing add-on URLs.
+
+1. In your fork on GitHub, open **Settings**.
+2. Go to **Pages**.
+3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+4. Go to **Actions** and run the **Deploy GitHub Pages** workflow.
+
+After the workflow finishes, use your fork's GitHub Pages URL. The add-on URL will look like:
+
+`https://<your-github-username>.github.io/nde-add-ons/<addon-name>/`
+
+For example, if your fork is under `my-repo`, the `orca-test-banner` URL would be:
+
+`https://my-repo.github.io/nde-add-ons/orca-test-banner/`
