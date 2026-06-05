@@ -4,8 +4,12 @@ This repository hosts multiple add-ons that share the same `customModule-main` b
 
 ## Add-ons
 
-- [`orca-test-banner`](./orca-add-ons/src/addons/orca-test-banner/README.md)
+- [`orca-display-mmsid`](./orca-add-ons/src/addons/orca-display-mmsid/README.md)
 - [`orca-enlarge-cover`](./orca-add-ons/src/addons/orca-enlarge-cover/README.md)
+- [`orca-external-search`](./orca-add-ons/src/addons/orca-external-search/README.md)
+- [`orca-test-banner`](./orca-add-ons/src/addons/orca-test-banner/README.md)
+- [`orca-top-banner`](./orca-add-ons/src/addons/orca-top-banner/README.md)
+
 
 
 ## Adding a New Component
@@ -16,7 +20,7 @@ Before making changes:
 
 1. Start from the latest `main` branch.
 2. Create a new branch for your add-on work.
-3. Create the new component inside `orca-add-ons`.
+3. Create the new component inside [`orca-add-ons`](./orca-add-ons).
 4. Update the add-on profiles so the new component can be built in this repo.
 
 ## Updating Profiles for Build
@@ -106,3 +110,20 @@ npm run build:addon
 ```
 
 Changing `ADDON_KEY` only affects single add-on builds and local generated settings. Leave optional overrides such as `BUILD_NAME`, `REMOTE_NAME`, and `PACKAGE_NAME` commented out unless you need to change the packaged output names.
+
+## Fork
+
+If you fork this repository, enable GitHub Pages for your fork before sharing add-on URLs.
+
+1. In your fork on GitHub, open **Settings**.
+2. Go to **Pages**.
+3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+4. Go to **Actions** and run the **Deploy GitHub Pages** workflow.
+
+After the workflow finishes, use your fork's GitHub Pages URL. The add-on URL will look like:
+
+`https://<your-github-username>.github.io/nde-add-ons/<addon-name>/`
+
+For example, if your fork is under `my-repo`, the `orca-test-banner` URL would be:
+
+`https://my-repo.github.io/nde-add-ons/orca-test-banner/`

@@ -9,6 +9,21 @@
       "buildName": "orca-enlarge-cover",
       "remoteName": "orcaEnlargeCover",
       "exposedModule": "./orca-enlarge-cover"
+    },
+    "orca-top-banner": {
+      "buildName": "orca-top-banner",
+      "remoteName": "orcaTopBanner",
+      "exposedModule": "./orca-top-banner"
+    },
+    "orca-external-search": {
+      "buildName": "orca-external-search",
+      "remoteName": "orcaExternalSearch",
+      "exposedModule": "./orca-external-search"
+    },
+    "orca-display-mmsid": {
+      "buildName": "orca-display-mmsid",
+      "remoteName": "orcaDisplayMmsid",
+      "exposedModule": "./orca-display-mmsid"
     }
   }
 }

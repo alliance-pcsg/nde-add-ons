@@ -1,0 +1,15 @@
+h2 {
+    padding-inline-start: .7rem;
+    padding-bottom: 18px
+}
+
+p {
+    color: var(--mat-switch-label-text-color, var(--mat-sys-on-surface));
+    font-family: var(--mat-switch-label-text-font, var(--mat-sys-body-medium-font));
+    line-height: var(--mat-switch-label-text-line-height, var(--mat-sys-body-medium-line-height));
+    font-size: var(--mat-switch-label-text-size, var(--mat-sys-body-medium-size));
+    letter-spacing: var(--mat-switch-label-text-tracking, var(--mat-sys-body-medium-tracking));
+    font-weight: var(--mat-switch-label-text-weight, var(--mat-sys-body-medium-weight));
+    padding-left: 32px;
+    padding-bottom: 7px;
+}
