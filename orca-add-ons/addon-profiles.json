@@ -5,6 +5,11 @@
       "remoteName": "orcaTestBanner",
       "exposedModule": "./orca-test-banner"
     },
+    "orca-enlarge-cover": {
+      "buildName": "orca-enlarge-cover",
+      "remoteName": "orcaEnlargeCover",
+      "exposedModule": "./orca-enlarge-cover"
+    },
     "orca-top-banner": {
       "buildName": "orca-top-banner",
       "remoteName": "orcaTopBanner",

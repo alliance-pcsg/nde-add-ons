@@ -1,0 +1,7 @@
+@if (enlargedLink$ | async; as enlargedCoverUrl) {
+  <div class="orca-cover-button">
+    <button type="button" (click)="openCoverDialog(enlargedCoverUrl)">
+      {{buttonText}}
+    </button>
+  </div>
+}

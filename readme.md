@@ -5,6 +5,7 @@ This repository hosts multiple add-ons that share the same `customModule-main` b
 ## Add-ons
 
 - [`orca-display-mmsid`](./orca-add-ons/src/addons/orca-display-mmsid/README.md)
+- [`orca-enlarge-cover`](./orca-add-ons/src/addons/orca-enlarge-cover/README.md)
 - [`orca-external-search`](./orca-add-ons/src/addons/orca-external-search/README.md)
 - [`orca-test-banner`](./orca-add-ons/src/addons/orca-test-banner/README.md)
 - [`orca-top-banner`](./orca-add-ons/src/addons/orca-top-banner/README.md)

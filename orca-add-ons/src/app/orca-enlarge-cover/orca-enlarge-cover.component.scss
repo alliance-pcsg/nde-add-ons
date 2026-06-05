@@ -1,0 +1,11 @@
+.orca-cover-button button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--sys-primary);
+}
+
+.orca-cover-button button:hover,
+.orca-cover-button button:focus {
+  text-decoration: underline;
+}
