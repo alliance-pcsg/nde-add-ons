@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OrcaEnlargeCoverComponent } from './orca-enlarge-cover.component';
 
-describe('EnlargeCoverComponent', () => {
+describe('OrcaEnlargeCoverComponent', () => {
   let component: OrcaEnlargeCoverComponent;
   let fixture: ComponentFixture<OrcaEnlargeCoverComponent>;
 
