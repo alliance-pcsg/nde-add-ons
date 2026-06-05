@@ -1,15 +1,15 @@
 import { AddonRuntimeProfile } from './addon-profile.types';
-import { orcaTestBannerProfile } from './orca-test-banner';
+import { orcaDisplayMmsidProfile } from './orca-display-mmsid';
 import { orcaEnlargeCoverProfile } from './orca-enlarge-cover';
 import { orcaExternalSearchProfile } from './orca-external-search';
-import { orcaDisplayMmsidProfile } from './orca-display-mmsid';
+import { orcaTestBannerProfile } from './orca-test-banner';
 import { orcaTopBannerProfile } from './orca-top-banner';
 
 const addonProfiles: Record<string, AddonRuntimeProfile> = {
-  'orca-test-banner': orcaTestBannerProfile,
+  'orca-display-mmsid': orcaDisplayMmsidProfile,
   'orca-enlarge-cover': orcaEnlargeCoverProfile,
   'orca-external-search': orcaExternalSearchProfile,
-  'orca-display-mmsid': orcaDisplayMmsidProfile,
+  'orca-test-banner': orcaTestBannerProfile,
   'orca-top-banner': orcaTopBannerProfile
 };
 
