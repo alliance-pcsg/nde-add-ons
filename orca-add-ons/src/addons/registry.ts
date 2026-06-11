@@ -3,14 +3,14 @@ import { orcaDisplayMmsidProfile } from './orca-display-mmsid';
 import { orcaEnlargeCoverProfile } from './orca-enlarge-cover';
 import { orcaExternalSearchProfile } from './orca-external-search';
 import { orcaTestBannerProfile } from './orca-test-banner';
-import { orcaExternalSearchProfile } from './orca-external-search';
+import { orcaTopBannerProfile } from './orca-top-banner';
 
 const addonProfiles: Record<string, AddonRuntimeProfile> = {
   'orca-display-mmsid': orcaDisplayMmsidProfile,
   'orca-enlarge-cover': orcaEnlargeCoverProfile,
   'orca-external-search': orcaExternalSearchProfile,
   'orca-test-banner': orcaTestBannerProfile,
-  'orca-external-search': orcaExternalSearchProfile
+  'orca-top-banner': orcaTopBannerProfile
 };
 
 export function resolveAddonRuntimeProfile(addonKey: string): AddonRuntimeProfile {
