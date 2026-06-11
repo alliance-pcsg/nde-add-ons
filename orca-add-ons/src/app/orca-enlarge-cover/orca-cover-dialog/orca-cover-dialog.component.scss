@@ -1,0 +1,23 @@
+.orca-enlarged-cover .close {
+  text-align: right;
+  margin-bottom: .25rem;
+}
+
+.orca-enlarged-cover .close button {
+  background: var(--sys-on-primary);
+  border: none;
+  border-radius: .25rem;
+  padding: .5rem;
+  cursor: pointer;
+  color: var(--sys-primary);
+}
+
+.orca-enlarged-cover .close button:hover,
+.orca-enlarged-cover .close button:focus {
+  text-decoration: underline;
+}
+
+.orca-enlarged-cover .cover-image img {
+  max-width: 100%;
+  height: auto;
+}

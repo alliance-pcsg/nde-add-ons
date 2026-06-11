@@ -1,14 +1,29 @@
 {
   "addons": {
+    "orca-display-mmsid": {
+      "buildName": "orca-display-mmsid",
+      "remoteName": "orcaDisplayMmsid",
+      "exposedModule": "./orca-display-mmsid"
+    },
+    "orca-enlarge-cover": {
+      "buildName": "orca-enlarge-cover",
+      "remoteName": "orcaEnlargeCover",
+      "exposedModule": "./orca-enlarge-cover"
+    },
+    "orca-external-search": {
+      "buildName": "orca-external-search",
+      "remoteName": "orcaExternalSearch",
+      "exposedModule": "./orca-external-search"
+    },
     "orca-test-banner": {
       "buildName": "orca-test-banner",
       "remoteName": "orcaTestBanner",
       "exposedModule": "./orca-test-banner"
     },
-    "external-search": {
-      "buildName": "orca-external-search",
-      "remoteName": "orcaExternalSearch",
-      "exposedModule": "./orca-external-search"
+    "orca-top-banner": {
+      "buildName": "orca-top-banner",
+      "remoteName": "orcaTopBanner",
+      "exposedModule": "./orca-top-banner"
     }
   }
 }
