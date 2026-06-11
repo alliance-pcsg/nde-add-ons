@@ -12,4 +12,8 @@ p {
     font-weight: var(--mat-switch-label-text-weight, var(--mat-sys-body-medium-weight));
     padding-left: 32px;
     padding-bottom: 7px;
+
+    img {
+        height: 22px;
+    }
 }
