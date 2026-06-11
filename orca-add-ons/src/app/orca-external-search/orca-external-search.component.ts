@@ -46,6 +46,7 @@ export class OrcaExternalSearchComponent implements OnInit {
   searchMode: string | null = null;
   searchQuery: string | null = null;
   searchTerms: string = '';
+  worldcatSearchUrl: string = '';
 
   ngOnInit() {
     // Read the current search mode and query from the Primo page URL.
@@ -58,6 +59,7 @@ export class OrcaExternalSearchComponent implements OnInit {
     // handling both simple and advanced search modes.
     // encodeURIComponent ensures special characters (spaces, &, #, etc.) don't break the URLs.
     this.searchTerms = encodeURIComponent(this.processText(this.searchQuery ?? ''));
+    this.worldcatSearchUrl = this.worldcatString + this.searchTerms;
   }
 
   // Reads a single query parameter from the current page URL.
