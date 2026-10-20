@@ -45,6 +45,6 @@ If the icon doesn't appear, check whether Primo is loading the add-on. Open the 
 https://<your-primo-host>/primaws/rest/pub/configuration/vid/<vid>
 ```
 
-For example: `https://orbiscascade-washington-psb.primo.exlibrisgroup.com/primaws/rest/pub/configuration/vid/01ALLIANCE_UW:wade`
+For example: `https://orbiscascade-washington-psb.primo.exlibrisgroup.com/primaws/rest/pub/configuration/vid/01ALLIANCE_UW:UW_NDE`
 
 Search the response for `ndeAddons`. It should include an `orca-pin-icon` entry with the URL `https://alliance-pcsg.github.io/nde-add-ons/orca-pin-icon/`. If the entry is missing, the problem is in the Alma add-on configuration, not the add-on code. Check that the add-on is attached to the right view, is saved, and has a configuration file uploaded.
