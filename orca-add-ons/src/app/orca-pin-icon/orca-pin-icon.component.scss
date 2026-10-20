@@ -1,0 +1,76 @@
+.orca-pin-icon-container {
+    display: flex;
+    justify-content: center;
+    padding-right: .5rem !important;
+}
+
+.orca-pin-icon-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    color: white;
+    text-decoration: none;
+}
+
+.orca-pin-icon-tooltip {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 4px);
+    box-sizing: border-box;
+    min-width: 40px;
+    max-width: 200px;
+    min-height: 24px;
+    background-color: #313033;
+    color: #F4EFF4;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.025em;
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+    z-index: 1000;
+}
+
+.orca-pin-icon-link:hover .orca-pin-icon-tooltip,
+.orca-pin-icon-link:focus-visible .orca-pin-icon-tooltip {
+    opacity: 1;
+}
+
+/* .orca-pin-icon-link svg {
+    transform: rotate(15deg);
+} */
+
+.orca-pin-icon-link svg path {
+    fill: white;
+    transition: fill 0.15s ease;
+}
+
+.orca-pin-icon-link:hover,
+.orca-pin-icon-link:active {
+    background-color: rgb(255, 199, 0) !important;
+    border-radius: 50% !important;
+}
+
+.orca-pin-icon-link:hover svg path,
+.orca-pin-icon-link:active svg path {
+    fill: #000 !important;
+}
+
+@media screen and (max-width: 550px) {
+    .orca-pin-icon-container {
+        display: none !important;
+    }
+}

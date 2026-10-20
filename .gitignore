@@ -55,3 +55,6 @@ coverage/
 tmp/
 temp/
 
+
+# Claude Code guidance (local only)
+CLAUDE.md

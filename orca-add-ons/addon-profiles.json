@@ -15,6 +15,11 @@
       "remoteName": "orcaExternalSearch",
       "exposedModule": "./orca-external-search"
     },
+    "orca-pin-icon": {
+      "buildName": "orca-pin-icon",
+      "remoteName": "orcaPinIcon",
+      "exposedModule": "./orca-pin-icon"
+    },
     "orca-test-banner": {
       "buildName": "orca-test-banner",
       "remoteName": "orcaTestBanner",

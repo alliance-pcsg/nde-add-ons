@@ -2,6 +2,7 @@ import { AddonRuntimeProfile } from './addon-profile.types';
 import { orcaDisplayMmsidProfile } from './orca-display-mmsid';
 import { orcaEnlargeCoverProfile } from './orca-enlarge-cover';
 import { orcaExternalSearchProfile } from './orca-external-search';
+import { orcaPinIconProfile } from './orca-pin-icon';
 import { orcaTestBannerProfile } from './orca-test-banner';
 import { orcaTopBannerProfile } from './orca-top-banner';
 
@@ -9,6 +10,7 @@ const addonProfiles: Record<string, AddonRuntimeProfile> = {
   'orca-display-mmsid': orcaDisplayMmsidProfile,
   'orca-enlarge-cover': orcaEnlargeCoverProfile,
   'orca-external-search': orcaExternalSearchProfile,
+  'orca-pin-icon': orcaPinIconProfile,
   'orca-test-banner': orcaTestBannerProfile,
   'orca-top-banner': orcaTopBannerProfile
 };
