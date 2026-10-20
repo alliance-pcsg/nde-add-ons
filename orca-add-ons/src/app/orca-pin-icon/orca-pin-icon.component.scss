@@ -14,8 +14,10 @@
     height: 44px;
     min-width: 44px;
     min-height: 44px;
-    color: white;
+    color: inherit;
+    border-radius: 50%;
     text-decoration: none;
+    transition: background-color 0.15s ease;
 }
 
 .orca-pin-icon-tooltip {
@@ -49,24 +51,20 @@
     opacity: 1;
 }
 
-/* .orca-pin-icon-link svg {
-    transform: rotate(15deg);
-} */
-
+/* Icon follows the header text colour unless iconColor is configured. */
 .orca-pin-icon-link svg path {
-    fill: white;
+    fill: var(--orca-pin-icon-color, currentColor);
     transition: fill 0.15s ease;
 }
 
 .orca-pin-icon-link:hover,
 .orca-pin-icon-link:active {
-    background-color: rgb(255, 199, 0) !important;
-    border-radius: 50% !important;
+    background-color: var(--orca-pin-icon-hover-bg, color-mix(in srgb, currentColor 16%, transparent));
 }
 
 .orca-pin-icon-link:hover svg path,
 .orca-pin-icon-link:active svg path {
-    fill: #000 !important;
+    fill: var(--orca-pin-icon-hover-color, var(--orca-pin-icon-color, currentColor));
 }
 
 @media screen and (max-width: 550px) {
