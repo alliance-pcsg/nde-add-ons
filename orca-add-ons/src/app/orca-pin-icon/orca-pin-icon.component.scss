@@ -20,6 +20,11 @@
     transition: background-color 0.15s ease;
 }
 
+/* Space between the search history and favorites icons when both are shown. */
+.orca-pin-icon-link + .orca-pin-icon-link {
+    margin-left: 44px;
+}
+
 .orca-pin-icon-tooltip {
     position: absolute;
     top: 100%;
