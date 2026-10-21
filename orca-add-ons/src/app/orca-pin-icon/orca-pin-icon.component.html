@@ -1,5 +1,15 @@
 <div class="orca-pin-icon-container" [ngStyle]="colorVars">
-    <a [href]="favoritesHref" class="orca-pin-icon-link" aria-label="Go to saved records">
+    <a *ngIf="showSearchHistory" [href]="searchHistoryHref" class="orca-pin-icon-link" aria-label="Go to search history">
+        <!-- Same viewBox as the bookmark; the transform scales the 24px clock to the bookmark's height and centre. -->
+        <svg height="100%" viewBox="0 -960 960 960" width="100%" fill="inherit" fit=""
+            preserveAspectRatio="xMidYMid meet" focusable="false">
+            <path transform="translate(480 -500) scale(37.78) translate(-11.5 -12)"
+                d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z">
+            </path>
+        </svg>
+        <span class="orca-pin-icon-tooltip" role="tooltip" aria-label="Go to search history">Click to go to
+            search history</span></a>
+    <a *ngIf="showFavorites" [href]="favoritesHref" class="orca-pin-icon-link" aria-label="Go to saved records">
         <svg height="100%" viewBox="0 -960 960 960" width="100%" fill="inherit" fit=""
             preserveAspectRatio="xMidYMid meet" focusable="false">
             <path
