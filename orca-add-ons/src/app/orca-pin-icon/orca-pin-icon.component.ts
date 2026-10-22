@@ -18,16 +18,17 @@ interface PinIconConfig {
   encapsulation: ViewEncapsulation.None
 })
 export class OrcaPinIconComponent {
-  colorVars: Record<string, string> = {};
   showSearchHistory: boolean;
   showFavorites: boolean;
 
   constructor(@Optional() @Inject('MODULE_PARAMETERS') moduleParameters: PinIconConfig | null) {
     // Blank or missing values fall back to the header's own colours (see the .scss).
+    // Set on the root so the NDE user area icons outside this component can use them too.
     const config = moduleParameters ?? {};
-    if (config.iconColor) this.colorVars['--orca-pin-icon-color'] = config.iconColor;
-    if (config.hoverBackgroundColor) this.colorVars['--orca-pin-icon-hover-bg'] = config.hoverBackgroundColor;
-    if (config.hoverIconColor) this.colorVars['--orca-pin-icon-hover-color'] = config.hoverIconColor;
+    const root = document.documentElement.style;
+    if (config.iconColor) root.setProperty('--orca-pin-icon-color', config.iconColor);
+    if (config.hoverBackgroundColor) root.setProperty('--orca-pin-icon-hover-bg', config.hoverBackgroundColor);
+    if (config.hoverIconColor) root.setProperty('--orca-pin-icon-hover-color', config.hoverIconColor);
     // Both icons show unless hidden with a value of 1 (number or string).
     this.showSearchHistory = Number(config.hideSearches) !== 1;
     this.showFavorites = Number(config.hideFavorites) !== 1;
