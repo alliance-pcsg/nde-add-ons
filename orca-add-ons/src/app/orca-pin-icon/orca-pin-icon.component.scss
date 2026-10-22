@@ -21,7 +21,7 @@
 }
 
 /* Space between the search history and favorites icons when both are shown. */
-.orca-pin-icon-link + .orca-pin-icon-link {
+.orca-pin-icon-link+.orca-pin-icon-link {
     margin-left: 44px;
 }
 
@@ -76,4 +76,12 @@
     .orca-pin-icon-container {
         display: none !important;
     }
+}
+
+nde-user-area button.mat-mdc-icon-button mat-icon svg,
+nde-user-area button.mat-mdc-icon-button mat-icon {
+    width: 40px !important;
+    height: 40px !important;
+    left: -8px !important;
+    top: -8px !important;
 }
