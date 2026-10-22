@@ -85,3 +85,29 @@ nde-user-area button.mat-mdc-icon-button mat-icon {
     left: -8px !important;
     top: -8px !important;
 }
+
+/* NDE user area icons use the same colours as the pin icons. */
+nde-user-area button.mat-mdc-icon-button mat-icon {
+    color: var(--orca-pin-icon-color, currentColor);
+    transition: color 0.15s ease;
+}
+
+nde-user-area button.mat-mdc-icon-button mat-icon svg path {
+    fill: var(--orca-pin-icon-color, currentColor);
+    transition: fill 0.15s ease;
+}
+
+nde-user-area button.mat-mdc-icon-button:hover,
+nde-user-area button.mat-mdc-icon-button:active {
+    background-color: var(--orca-pin-icon-hover-bg, color-mix(in srgb, currentColor 16%, transparent));
+}
+
+nde-user-area button.mat-mdc-icon-button:hover mat-icon,
+nde-user-area button.mat-mdc-icon-button:active mat-icon {
+    color: var(--orca-pin-icon-hover-color, var(--orca-pin-icon-color, currentColor));
+}
+
+nde-user-area button.mat-mdc-icon-button:hover mat-icon svg path,
+nde-user-area button.mat-mdc-icon-button:active mat-icon svg path {
+    fill: var(--orca-pin-icon-hover-color, var(--orca-pin-icon-color, currentColor));
+}
