@@ -27,7 +27,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v5
         with:
-          node-version: 20
+          node-version: '>=22.23.4 <23'
+          check-latest: true
           cache: npm
           cache-dependency-path: orca-add-ons/package-lock.json
 
