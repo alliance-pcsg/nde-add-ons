@@ -15,6 +15,11 @@
       "remoteName": "orcaExternalSearch",
       "exposedModule": "./orca-external-search"
     },
+    "orca-hathi-trust": {
+      "buildName": "orca-hathi-trust",
+      "remoteName": "orcaHathiTrust",
+      "exposedModule": "./orca-hathi-trust"
+    },
     "orca-pin-icon": {
       "buildName": "orca-pin-icon",
       "remoteName": "orcaPinIcon",

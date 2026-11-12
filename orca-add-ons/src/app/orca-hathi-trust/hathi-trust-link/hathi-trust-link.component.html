@@ -1,0 +1,16 @@
+<div
+  data-qa="brief_result_external_links"
+  class="flex-row flex-layout-center online availability-container"
+>
+  <span>
+    <a
+      mat-button
+      color="primary"
+      class="quicklink-button mat-body-medium"
+      [href]="url()"
+      target="_blank"
+      [style.--mdc-icon-button-icon-size]="'1rem'"
+      ><span><ng-content /></span
+    ></a>
+  </span>
+</div>

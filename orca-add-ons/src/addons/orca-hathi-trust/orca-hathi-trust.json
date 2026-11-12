@@ -1,0 +1,11 @@
+{
+  "disableWhenAvailableOnline": true,
+  "disableForJournals": false,
+  "ignoreCopyright": false,
+  "matchOn": {
+    "oclc": true,
+    "isbn": false,
+    "issn": false,
+    "lccn": false
+  }
+}
