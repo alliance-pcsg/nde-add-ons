@@ -31,23 +31,3 @@ export const selectDeliveryEntities = createSelector(
   deliveryFeature,
   (deliveryState) => deliveryState.entities,
 );
-
-export const selectFullDisplayRecord = createSelector(
-  selectFullDisplayRecordId,
-  selectSearchEntities,
-  (recordId: string | null, searchEntities) =>
-    recordId ? searchEntities[recordId] : null,
-);
-
-export const selectFullDisplayWithDelivery = createSelector(
-  selectFullDisplayRecordId,
-  selectFullDisplayRecord,
-  selectDeliveryEntities,
-  (recordId: string | null, record: Doc | null, deliveryEntities) => {
-    if (recordId && record) {
-      const delivery = deliveryEntities[recordId];
-      return { ...record, ...delivery };
-    }
-    return null;
-  },
-);

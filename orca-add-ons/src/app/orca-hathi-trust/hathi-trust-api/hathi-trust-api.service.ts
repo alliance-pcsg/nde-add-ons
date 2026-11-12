@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import type { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs';
+import { catchError, map, of, shareReplay } from 'rxjs';
 import type {
   HathiTrustMultiIdResponse,
   HathiTrustQuery,
@@ -48,6 +48,14 @@ export class HathiTrustApiService {
           ignoreCopyright: this.config.ignoreCopyright,
         }),
       ),
+      // Treat any failure (network, rate limit, unexpected response shape) as
+      // "no full text" and cache that result. Without this, shareReplay would
+      // re-run the request for every new subscriber, and the error would end
+      // the component's stream.
+      catchError((error: unknown) => {
+        console.warn(`HathiTrust lookup failed for "${key}"`, error);
+        return of(undefined);
+      }),
       shareReplay(1),
     );
 
