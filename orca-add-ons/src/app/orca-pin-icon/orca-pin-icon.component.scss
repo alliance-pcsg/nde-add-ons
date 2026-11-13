@@ -10,10 +10,11 @@
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
-    min-height: 44px;
+    /* Matches the NDE user area button; the component measures it on the page. */
+    width: var(--orca-pin-icon-size, 40px);
+    height: var(--orca-pin-icon-size, 40px);
+    min-width: var(--orca-pin-icon-size, 40px);
+    min-height: var(--orca-pin-icon-size, 40px);
     color: inherit;
     border-radius: 50%;
     text-decoration: none;
